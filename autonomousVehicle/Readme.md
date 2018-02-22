@@ -13,15 +13,15 @@
 
 * 조립
 
-  <img src="/img/making.jpg" width="300" height="300"></img>
+  <img src="https://github.com/rim0621/RobotSW/blob/master/autonomousVehicle/img/making.jpg?raw=true" width="300" height="300"></img>
 
 * 측면
 
-  <img src="/img/left.jpg" width="300" height="300"></img>
+  <img src="https://raw.githubusercontent.com/rim0621/RobotSW/master/autonomousVehicle/img/left.jpg" width="300" height="300"></img>
 
 * 앞
 
-  <img src="/img/front.jpg" width="300" height="300"></img>
+  <img src="https://raw.githubusercontent.com/rim0621/RobotSW/master/autonomousVehicle/img/front.jpg" width="300" height="300"></img>
 
 > 처음에는 앞과 왼쪽에 초음파 센서를 사용하여 left hand알고리즘을 사용하려고 하였으나 오른쪽에 부딪힐 경우 예외처리로 빠져나오기 위해서 오른쪽도 센서를 달아 3개를 사용하였다.
 
@@ -41,17 +41,19 @@ i=i+ki*err;
 d=(err-lsterr) * kd;
 ```
 
-<img src="/img/PID1.png" width="300" height="300"></img>
+<img src="https://github.com/rim0621/RobotSW/blob/master/autonomousVehicle/img/PID1.png?raw=true" width="300" height="300"></img>
 
 > PID제어 데이터를 뽑은 결과 다음과 같이 나왔다.
 
 > 초흠파거리센서가 0.001초 마다 가져와서 제대로된 제어가 안되는 거라고 판단해서 0.1초마다 가져오기위해 메인에 슬립을 주었다.
 
-<img src="/img/PID2.png" width="300" height="300"></img>
+<img src="https://github.com/rim0621/RobotSW/blob/master/autonomousVehicle/img/PID2.png?raw=true" width="300" height="300"></img>
 
 > 그 결과 제어가 좀더 가능해 졌다.
 
 > 처음에는 제어를 잘했지만 뒤쪽에는 직선 구간이 부딪히는 상황이 생겨서 값이 뛰어 제어가 잘 안되는 것을 볼 수 있다.
+
+> 게인값 -> kp=4 ki=0.0002 kd=25
 
 ### 코드
 
